@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityActivity">
+    tools:context=".view.ActivityActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -13,13 +13,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/logotipo" />
+        app:srcCompat="@drawable/logotipo" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlinedTextField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/label"
+        android:hint="@string/hint_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
@@ -34,24 +34,50 @@
         android:id="@+id/outlinedTextField2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/label2"
-        app:endIconMode="password_toggle">
-
-
-    app:layout_constraintTop_toBottomOf="@+id/outlinedTextField">
+        android:hint="@string/hint_senha"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/esqueciasenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="@string/hint_esqueci_a_senha"
+        android:text="Esqueci a senha"
+        android:textColor="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField2" />
+
+    <TextView
+        android:id="@+id/fazer_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:hint="@string/hint_fazer_cadastro"
+        android:text="Fazer cadastro"
+        android:textColor="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField2" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="logar"
-        tools:layout_editor_absoluteX="173dp"
-        tools:layout_editor_absoluteY="273dp" />
+        android:backgroundTint="@color/purple"
+        android:hint="@string/hint_logar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/esqueciasenha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
