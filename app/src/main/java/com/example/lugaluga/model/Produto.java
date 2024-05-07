@@ -1,6 +1,11 @@
 package com.example.lugaluga.model;
 
-public class Produto {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
+public class Produto implements Parcelable {
     private String nome;
     private double preco;
     private String marca;
@@ -19,6 +24,27 @@ public class Produto {
         this.status = status;
         this.descricao = descricao;
     }
+
+    protected Produto(Parcel in) {
+        nome = in.readString();
+        preco = in.readDouble();
+        marca = in.readString();
+        quantidade = in.readInt();
+        status = in.readString();
+        descricao = in.readString();
+    }
+
+    public static final Creator<Produto> CREATOR = new Creator<Produto>() {
+        @Override
+        public Produto createFromParcel(Parcel in) {
+            return new Produto(in);
+        }
+
+        @Override
+        public Produto[] newArray(int size) {
+            return new Produto[size];
+        }
+    };
 
     public String getNome() {
         return nome;
@@ -67,4 +93,21 @@ public class Produto {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeString(nome);
+        dest.writeDouble(preco);
+        dest.writeString(marca);
+        dest.writeInt(quantidade);
+        dest.writeString(status);
+        dest.writeString(descricao);
+    }
+
+
 }
