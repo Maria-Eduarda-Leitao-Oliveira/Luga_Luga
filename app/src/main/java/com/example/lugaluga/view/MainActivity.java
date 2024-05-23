@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
@@ -73,14 +74,12 @@ recyclerView.addOnItemTouchListener(
     }
 }));
 
-
-
     }
 
     public void CriarListaProdutos(){
         Produto produto;
         produto = new Produto(
-                "IPhonev13",
+                "IPhone13",
                 2000.00,
                 "Iphone 13",
                 10,
@@ -93,7 +92,7 @@ recyclerView.addOnItemTouchListener(
                 60.00,
                 "Apple",
                 20,
-                "Disponível",
+                "Indisponível",
                 "Descricao");
         produtoList.add(produto);
 
@@ -111,7 +110,7 @@ recyclerView.addOnItemTouchListener(
                 30.00,
                 "Motorola",
                 16,
-                "Disponível",
+                "Indisponível",
                 "Descricao");
         produtoList.add(produto);
 
@@ -147,7 +146,7 @@ recyclerView.addOnItemTouchListener(
                 1500.00,
                 "Electrolux",
                 10,
-                "Disponível",
+                "Indisponível",
                 "Descricao");
         produtoList.add(produto);
 
@@ -165,7 +164,7 @@ recyclerView.addOnItemTouchListener(
                 500.00,
                 "Mondial",
                 8,
-                "Disponível",
+                "Indisponível",
                 "Descricao");
 
 

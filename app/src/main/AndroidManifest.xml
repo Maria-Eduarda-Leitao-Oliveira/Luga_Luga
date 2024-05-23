@@ -13,10 +13,21 @@
         android:theme="@style/Theme.LugaLuga"
         tools:targetApi="31">
         <activity
+            android:name=".view.MainActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.LugaLuga.NoActionBar" />
+        <activity
+            android:name=".view.Cadastro_Activity"
+            android:exported="false" />
+        <activity
             android:name=".view.ProdutoActivity2"
             android:exported="false" />
         <activity
-            android:name=".view.ActivityActivity"
+            android:name=".view.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +37,7 @@
         </activity>
         <activity
             android:name=".view.MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
